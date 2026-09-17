@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>365 Days With God 🤍</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Background particles -->
+  <div class="particles">
+    <span>✦</span>
+    <span>♡</span>
+    <span>✧</span>
+    <span>♡</span>
+    <span>✦</span>
+  </div>
+
+
+  <!-- INTRO -->
+  <section id="intro" class="screen active">
+
+    <div class="intro-card">
+
+      <div class="cross">✝</div>
+
+      <p class="mini-title">
+        ஒரு சிறிய நம்பிக்கை பயணம்
+      </p>
+
+      <h1>
+        365 Days<br>
+        <span>With God</span>
+      </h1>
+
+      <p class="intro-text">
+        ஒரு நாள் • ஒரு வசனம் • ஒரு நினைவூட்டல்
+      </p>
+
+      <button class="main-btn" onclick="startJourney()">
+        📖 Bible-ஐ திறக்க
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- MAIN -->
+  <section id="main" class="screen">
+
+    <div class="container">
+
+      <div class="top">
+
+        <div>
+          <p class="small-label">YOUR DAILY JOURNEY</p>
+          <h2>365 Days With God</h2>
+        </div>
+
+        <div class="cross-small">✝</div>
+
+      </div>
+
+
+      <!-- Bible -->
+      <div class="bible">
+
+        <div class="page left-page"></div>
+
+        <div class="page right-page">
+
+          <div class="page-content">
+
+            <p class="day" id="day">
+              நாள் 1
+            </p>
+
+            <div class="ornament">
+              ✦
+            </div>
+
+            <h3 id="reference">
+              சங்கீதம் 23:1
+            </h3>
+
+            <p class="verse-message" id="message">
+              இன்றைய நாள் உனக்கு ஒரு
+              சிறிய நினைவூட்டல் 🤍
+            </p>
+
+            <div class="line"></div>
+
+            <p class="personal" id="personal">
+              இன்று எதுவாக இருந்தாலும்,
+              தேவன் உன்னோடு இருக்கிறார்.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Progress -->
+
+      <div class="progress-area">
+
+        <div class="progress-info">
+
+          <span id="progressText">
+            Day 1 of 365
+          </span>
+
+          <span id="percentage">
+            0%
+          </span>
+
+        </div>
+
+        <div class="progress">
+          <div id="progressBar"></div>
+        </div>
+
+      </div>
+
+
+      <!-- Buttons -->
+
+      <div class="buttons">
+
+        <button
+          class="secondary"
+          id="previousBtn"
+          onclick="previousDay()"
+        >
+          ← Previous
+        </button>
+
+        <button
+          class="main-btn"
+          id="nextBtn"
+          onclick="nextDay()"
+        >
+          Next Day →
+        </button>
+
+      </div>
+
+
+      <p class="footer">
+        Made with faith & love 🤍
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- FINAL -->
+  <section id="final" class="screen">
+
+    <div class="final-card">
+
+      <div class="final-cross">
+        ✝
+      </div>
+
+      <p class="mini-title">
+        DAY 365
+      </p>
+
+      <h1>
+        You made it.
+      </h1>
+
+      <div class="gold-line"></div>
+
+      <p class="final-text">
+
+        365 நாட்கள்.<br>
+        365 நினைவூட்டல்கள்.<br>
+        ஒரு அழகான நம்பிக்கை பயணம்.
+
+      </p>
+
+      <p class="final-message">
+
+        அடுத்த chapter எப்படி இருக்கும்
+        என்று நமக்குத் தெரியாது.
+
+        <br><br>
+
+        ஆனால் ஒவ்வொரு chapter-லும்
+        தேவன் உன்னோடு இருப்பார். 🤍
+
+      </p>
+
+      <div class="stars">
+        ✦ ✧ ✦
+      </div>
+
+      <button
+        class="main-btn"
+        onclick="restartJourney()"
+      >
+        மீண்டும் தொடங்கலாம்
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>

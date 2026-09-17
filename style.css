@@ -1,0 +1,842 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+
+  min-height: 100vh;
+
+  font-family:
+    "Noto Serif Tamil",
+    serif;
+
+  color: #4b4038;
+
+  background:
+    radial-gradient(
+      circle at 20% 10%,
+      #fffdf8,
+      transparent 35%
+    ),
+
+    radial-gradient(
+      circle at 80% 90%,
+      #e8dcc8,
+      transparent 40%
+    ),
+
+    linear-gradient(
+      135deg,
+      #f8f2e8,
+      #eee3d1
+    );
+
+  overflow-x: hidden;
+}
+
+
+/* ---------------- PARTICLES ---------------- */
+
+.particles span {
+
+  position: fixed;
+
+  font-size: 20px;
+
+  color: #a99478;
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  animation: float 9s linear infinite;
+}
+
+.particles span:nth-child(1) {
+  left: 10%;
+  bottom: -20px;
+}
+
+.particles span:nth-child(2) {
+  left: 30%;
+  bottom: -20px;
+  animation-delay: 2s;
+}
+
+.particles span:nth-child(3) {
+  left: 55%;
+  bottom: -20px;
+  animation-delay: 4s;
+}
+
+.particles span:nth-child(4) {
+  left: 75%;
+  bottom: -20px;
+  animation-delay: 1s;
+}
+
+.particles span:nth-child(5) {
+  left: 90%;
+  bottom: -20px;
+  animation-delay: 5s;
+}
+
+@keyframes float {
+
+  0% {
+    transform:
+      translateY(0)
+      rotate(0deg);
+
+    opacity: 0;
+  }
+
+  20% {
+    opacity: .5;
+  }
+
+  80% {
+    opacity: .4;
+  }
+
+  100% {
+    transform:
+      translateY(-110vh)
+      rotate(180deg);
+
+    opacity: 0;
+  }
+}
+
+
+/* ---------------- SCREEN ---------------- */
+
+.screen {
+
+  display: none;
+
+  min-height: 100vh;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 25px;
+}
+
+.screen.active {
+
+  display: flex;
+
+  animation: screenIn .8s ease;
+}
+
+@keyframes screenIn {
+
+  from {
+    opacity: 0;
+    transform: scale(.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* ---------------- INTRO ---------------- */
+
+.intro-card {
+
+  width: min(600px, 92vw);
+
+  padding: 65px 40px;
+
+  text-align: center;
+
+  background:
+    rgba(255,255,255,.7);
+
+  border:
+    1px solid
+    rgba(100,75,50,.15);
+
+  border-radius: 30px;
+
+  box-shadow:
+    0 30px 80px
+    rgba(70,50,30,.15);
+
+  backdrop-filter: blur(15px);
+}
+
+.cross {
+
+  font-size: 55px;
+
+  color: #8e765b;
+
+  animation: glow 3s infinite;
+}
+
+@keyframes glow {
+
+  0%,100% {
+    transform: scale(1);
+    opacity: .7;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+.mini-title {
+
+  margin-top: 15px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 11px;
+
+  letter-spacing: 4px;
+
+  color: #9b846b;
+}
+
+h1 {
+
+  margin-top: 15px;
+
+  font-family:
+    "Playfair Display",
+    serif;
+
+  font-size:
+    clamp(48px, 8vw, 75px);
+
+  line-height: 1;
+
+  color: #5a4a3b;
+}
+
+h1 span {
+
+  color: #947c60;
+}
+
+.intro-text {
+
+  margin-top: 25px;
+
+  font-size: 21px;
+
+  color: #847260;
+}
+
+
+/* ---------------- BUTTON ---------------- */
+
+.main-btn {
+
+  border: none;
+
+  padding: 14px 28px;
+
+  border-radius: 50px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #725d49,
+      #9a8061
+    );
+
+  color: white;
+
+  font-family: Arial, sans-serif;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 12px 30px
+    rgba(70,50,30,.2);
+
+  transition: .25s;
+}
+
+.intro-card .main-btn {
+
+  margin-top: 30px;
+}
+
+.main-btn:hover {
+
+  transform:
+    translateY(-4px);
+
+  box-shadow:
+    0 18px 35px
+    rgba(70,50,30,.25);
+}
+
+.main-btn:active {
+
+  transform: scale(.96);
+}
+
+
+/* ---------------- MAIN ---------------- */
+
+.container {
+
+  width: min(900px, 95vw);
+
+  padding: 30px;
+}
+
+.top {
+
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  align-items: center;
+
+  margin-bottom: 25px;
+}
+
+.small-label {
+
+  font-family: Arial, sans-serif;
+
+  font-size: 10px;
+
+  letter-spacing: 3px;
+
+  color: #9a846c;
+}
+
+.top h2 {
+
+  font-family:
+    "Playfair Display",
+    serif;
+
+  font-size: 32px;
+
+  color: #5c4b3c;
+}
+
+.cross-small {
+
+  font-size: 35px;
+
+  color: #8c745b;
+}
+
+
+/* ---------------- BIBLE ---------------- */
+
+.bible {
+
+  position: relative;
+
+  width: 100%;
+
+  min-height: 430px;
+
+  display: flex;
+
+  perspective: 1500px;
+
+  filter:
+    drop-shadow(
+      0 25px 30px
+      rgba(60,40,20,.18)
+    );
+}
+
+.page {
+
+  width: 50%;
+
+  min-height: 430px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #fdf9ef,
+      #eee2cd
+    );
+
+  border: 1px solid #d5c6ad;
+
+  position: relative;
+}
+
+.left-page {
+
+  border-radius:
+    12px 0 0 12px;
+
+  transform:
+    skewY(.4deg);
+}
+
+.right-page {
+
+  border-radius:
+    0 12px 12px 0;
+
+  transform-origin: left center;
+
+  animation:
+    openPage 1.3s ease;
+}
+
+@keyframes openPage {
+
+  from {
+    transform:
+      rotateY(-55deg);
+  }
+
+  to {
+    transform:
+      rotateY(0);
+  }
+}
+
+
+/* Center binding */
+
+.bible::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+
+  top: 0;
+
+  width: 4px;
+
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      #c7b79e,
+      #eee3d2,
+      #c7b79e
+    );
+
+  transform:
+    translateX(-50%);
+
+  box-shadow:
+    0 0 8px
+    rgba(80,60,40,.15);
+}
+
+
+/* Page content */
+
+.page-content {
+
+  height: 100%;
+
+  padding:
+    55px 40px;
+
+  text-align: center;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+.day {
+
+  font-family: Arial, sans-serif;
+
+  text-transform: uppercase;
+
+  letter-spacing: 3px;
+
+  font-size: 11px;
+
+  color: #a28b70;
+}
+
+.ornament {
+
+  margin: 14px;
+
+  color: #a68e70;
+
+  font-size: 20px;
+}
+
+#reference {
+
+  font-family:
+    "Playfair Display",
+    serif;
+
+  font-size: 30px;
+
+  color: #675443;
+}
+
+.verse-message {
+
+  margin-top: 20px;
+
+  font-size: 22px;
+
+  line-height: 1.7;
+
+  color: #51443a;
+}
+
+.line {
+
+  width: 80px;
+
+  height: 1px;
+
+  margin: 20px;
+
+  background: #b9a58b;
+}
+
+.personal {
+
+  max-width: 430px;
+
+  font-size: 18px;
+
+  line-height: 1.8;
+
+  color: #8a7764;
+
+  font-style: italic;
+}
+
+
+/* ---------------- PROGRESS ---------------- */
+
+.progress-area {
+
+  margin-top: 30px;
+}
+
+.progress-info {
+
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  margin-bottom: 8px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 11px;
+
+  color: #927d66;
+}
+
+.progress {
+
+  width: 100%;
+
+  height: 6px;
+
+  background: #ddd2c1;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+}
+
+#progressBar {
+
+  width: 0%;
+
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      #806951,
+      #b09a7b
+    );
+
+  transition:
+    width .7s ease;
+}
+
+
+/* ---------------- BUTTONS ---------------- */
+
+.buttons {
+
+  margin-top: 25px;
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 12px;
+}
+
+.secondary {
+
+  border: none;
+
+  padding: 14px 22px;
+
+  border-radius: 50px;
+
+  background: #e4dacb;
+
+  color: #665544;
+
+  font-family: Arial, sans-serif;
+
+  cursor: pointer;
+
+  transition: .25s;
+}
+
+.secondary:hover {
+
+  transform:
+    translateY(-3px);
+}
+
+.secondary:disabled {
+
+  opacity: .4;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+.footer {
+
+  text-align: center;
+
+  margin-top: 25px;
+
+  font-size: 14px;
+
+  color: #a08c77;
+}
+
+
+/* ---------------- FINAL ---------------- */
+
+.final-card {
+
+  width: min(650px, 92vw);
+
+  padding: 60px 35px;
+
+  text-align: center;
+
+  background:
+    rgba(255,255,255,.75);
+
+  border-radius: 30px;
+
+  border:
+    1px solid
+    rgba(120,90,60,.15);
+
+  box-shadow:
+    0 35px 90px
+    rgba(60,40,20,.2);
+
+  animation:
+    finalReveal 1.5s ease;
+}
+
+@keyframes finalReveal {
+
+  from {
+
+    opacity: 0;
+
+    transform:
+      scale(.75)
+      translateY(40px);
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform:
+      scale(1)
+      translateY(0);
+  }
+}
+
+.final-cross {
+
+  font-size: 55px;
+
+  color: #9a8060;
+
+  animation:
+    finalGlow 2s infinite;
+}
+
+@keyframes finalGlow {
+
+  0%,100% {
+    text-shadow:
+      0 0 0 transparent;
+  }
+
+  50% {
+    text-shadow:
+      0 0 30px
+      rgba(170,140,90,.7);
+  }
+}
+
+.gold-line {
+
+  width: 100px;
+
+  height: 1px;
+
+  background: #ae9775;
+
+  margin: 25px auto;
+}
+
+.final-text {
+
+  font-size: 25px;
+
+  line-height: 1.8;
+
+  color: #5d4d3e;
+}
+
+.final-message {
+
+  margin-top: 25px;
+
+  font-size: 19px;
+
+  line-height: 1.8;
+
+  color: #897562;
+}
+
+.stars {
+
+  margin: 25px;
+
+  font-size: 25px;
+
+  color: #a48a67;
+
+  animation:
+    glow 2s infinite;
+}
+
+
+/* ---------------- MOBILE ---------------- */
+
+@media(max-width:600px) {
+
+  .container {
+
+    padding: 10px;
+  }
+
+  .top h2 {
+
+    font-size: 25px;
+  }
+
+  .bible {
+
+    min-height: 390px;
+  }
+
+  .page {
+
+    min-height: 390px;
+  }
+
+  .left-page {
+
+    display: none;
+  }
+
+  .right-page {
+
+    width: 100%;
+
+    border-radius: 15px;
+  }
+
+  .bible::after {
+
+    display: none;
+  }
+
+  .page-content {
+
+    padding: 35px 25px;
+  }
+
+  #reference {
+
+    font-size: 25px;
+  }
+
+  .verse-message {
+
+    font-size: 20px;
+  }
+
+  .personal {
+
+    font-size: 16px;
+  }
+
+  .buttons {
+
+    flex-direction: row;
+  }
+
+  .intro-card {
+
+    padding:
+      50px 25px;
+  }
+
+}
